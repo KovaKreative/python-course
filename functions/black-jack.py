@@ -1,11 +1,11 @@
 def blackjack(*args):
   cards = sum(args)
+  
+  if 11 in args:
+    cards -= 10
 
   if cards <= 21:
     return cards
-  
-  if 11 in args:
-    return cards - 10
   
   return 'BUST'
   
