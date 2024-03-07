@@ -1,16 +1,11 @@
 def spy_game(nums):
-  find = [0, 0, 7]
-  index = 0
+  find = [0, 0, 7, "x"]
 
   for n in nums:
-
-    if n == find[index]:
-      index += 1
-
-    if index >= len(find):
-      return True
+    if n == find[0]:
+      find.pop(0)
   
-  return False
+  return len(find) <= 1
 
 # Check
 print(spy_game([1,2,4,0,0,7,5]))
