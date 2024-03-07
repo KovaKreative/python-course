@@ -1,9 +1,13 @@
 def count_primes(num):
-  primes = 0
-  for n in range(2, num + 1):
+  if num < 2:
+    return 0
+  
+  primes = 1
+
+  for n in range(3, num + 1, 2):
     # print("Check " + str(n))
     divisibles = 0
-    for d in range(2, n):
+    for d in range(3, n):
       if n % d == 0:
         # print("N: " + str(n))
         # print("D: " + str(d))
